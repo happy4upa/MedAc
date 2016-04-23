@@ -1,7 +1,7 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
-
+permalink: /:categories/:title
+	  
 #exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
 
@@ -94,9 +94,10 @@ JB :
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
-  #
-  #   pages_list :
-  #     provider : "custom"   
+  #  
+  pages_list :
+    provider : "custom"
+	
   #
   # Setting any helper's provider to 'custom' will bypass the helper code
   # and include your custom code. Your custom file must be defined at:

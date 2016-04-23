@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Hello World!
+title: Привет!
 tagline: Supporting tagline
+lang: ru
 ---
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+Русский вариант первой старницы
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
