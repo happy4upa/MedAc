@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Привет!
+header: index
 tagline: Supporting tagline
 lang: ru
 ---

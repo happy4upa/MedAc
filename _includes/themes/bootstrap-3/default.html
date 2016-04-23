@@ -59,21 +59,23 @@
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
           </ul>		 
-		  <ul class="nav navbar-nav">
-			
-			{% assign posts=site.posts | where:"title", page.title | sort: 'lang' %}
-			{% for post in posts %}
-			  <li>
-				<a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-			  </li>
-			{% endfor %}
-
-			{% assign pages=site.pages | where:"header", page.header | sort: 'lang' %}
-			{% for page in pages %}
-			  <li>
-				<a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
-			  </li>
-			{% endfor %}
+		  <ul class="nav navbar-nav">			    
+			{% if page.layout == 'post' %}		  
+				{% assign posts=site.posts | where:"title", page.title | sort: 'lang' %}
+				{% for post in posts %}
+				  <li>
+					<a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+				  </li>
+				{% endfor %}
+			{% endif %}
+			{% if page.layout != 'post' %}		  
+				{% assign pages=site.pages | where:"header", page.header | sort: 'lang' %}
+				{% for page in pages %}
+				  <li>
+					<a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+				  </li>
+				{% endfor %}
+			{% endif %}	
 		  </ul>
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">

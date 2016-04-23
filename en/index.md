@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Hello World!
+header: index
 tagline: Supporting tagline
 lang: en
 ---
