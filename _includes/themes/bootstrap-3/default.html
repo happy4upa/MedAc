@@ -35,7 +35,19 @@
       <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     -->
-
+	<!-- Alternative links (translations)-->
+	{% if page.layout == 'post' %}		  
+		{% assign posts=site.posts | where:"title", page.title | sort: 'lang' %}
+		{% for post in posts %}
+	<link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+		{% endfor %}
+	{% endif %}
+	{% if page.layout != 'post' %}		  
+		{% assign pages=site.pages | where:"header", page.header | sort: 'lang' %}
+		{% for page in pages %}
+	<link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+		{% endfor %}
+	{% endif %}	
   </head>
 
   <body>
