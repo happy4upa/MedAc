@@ -1,7 +1,8 @@
 ---
-postvar: true
-layout: page
-category : lessons
+layout: post
+lang: ru
+categories:
+    - articles
 tagline: "Supporting tagline"
 tags : [intro, beginner, jekyll, tutorial]
 ---
